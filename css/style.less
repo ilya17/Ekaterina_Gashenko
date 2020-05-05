@@ -1,0 +1,531 @@
+@AllColor: black;
+@TextLinkColor: #d4b380;
+@import url("reset.css") screen;
+@import url("animation.css") screen;
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+}
+body {
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    color: @AllColor
+}
+.footer-down {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    flex-grow: 1;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.link:hover {
+    color: @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.header-flex {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &__navigation {
+        list-style-type: none;
+        padding: 15px 20px;
+    }
+
+    &__list {
+        padding-left: 60px;
+    }
+    &__link-color {
+        color:     @TextLinkColor;
+    }
+}
+
+#content-slider {
+    width: 100%;
+    height: 600px;
+    margin: 10px auto 0;
+}
+
+/* SLIDER */
+#slider {
+    background: #000;
+    box-shadow: 0 0 20px @TextLinkColor;
+    height: 600px;
+    width: 1000px;
+    margin: 40px auto 0;
+    overflow: visible;
+    position: relative;
+}
+
+#mask {
+    overflow: hidden;
+    height: 600px;
+}
+
+#slider ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#slider li {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: -605px;
+    list-style: none;
+}
+
+#slider li.firstanimation {
+    -moz-animation: cycle 25s linear infinite;
+    -webkit-animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+    -moz-animation: cycletwo 25s linear infinite;
+    -webkit-animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+    -moz-animation: cyclethree 25s linear infinite;
+    -webkit-animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+    -moz-animation: cyclefour 25s linear infinite;
+    -webkit-animation: cyclefour 25s linear infinite;
+}
+
+#slider li.fifthanimation {
+    -moz-animation: cyclefive 25s linear infinite;
+    -webkit-animation: cyclefive 25s linear infinite;
+}
+
+#slider .tooltip {
+    background: rgba(0, 0, 0, 0.7);
+    width: 450px;
+    height: 60px;
+    position: relative;
+    bottom: 200px;
+    left: -470px;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+#slider .tooltip h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 60px;
+    padding: 0 0 0 20px;
+}
+
+#slider li#first:hover .tooltip,
+#slider li#second:hover .tooltip,
+#slider li#third:hover .tooltip,
+#slider li#fourth:hover .tooltip,
+#slider li#fifth:hover .tooltip {
+    left: 0px;
+}
+
+#slider:hover li,
+#slider:hover .progress-bar {
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+    position: relative;
+    top: -5px;
+    width: 1000px;
+    height: 5px;
+    background: @TextLinkColor;
+    -moz-animation: fullexpand 23s ease-out infinite;
+    -webkit-animation: fullexpand 23s ease-out infinite;
+}
+
+.blocks {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.right-blocks {
+    width: 588px;
+    transition: all 0.5s;
+}
+
+.right-blocks:hover {
+    -webkit-box-shadow: 0 0 20px @TextLinkColor;
+    -moz-box-shadow: 0 0 20px @TextLinkColor;
+    -o-box-shadow: 0 0 20px @TextLinkColor;
+    box-shadow: 0 0 20px @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.right-blocks:hover .list-about__text {
+    color: @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.right-blocks:hover .link-about-5 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.list-about {
+    margin-bottom: 12px;
+    transition: all 0.5s;
+
+    &__text {
+        color: white;
+        padding: 10px 10px;
+        font-size: 25px;
+        font-weight: 500;
+        transition: all 0.5s;
+    }
+}
+
+.list-about:hover {
+    -webkit-box-shadow: 0 0 20px @TextLinkColor;
+    -moz-box-shadow: 0 0 20px @TextLinkColor;
+    -o-box-shadow: 0 0 20px @TextLinkColor;
+    box-shadow: 0 0 20px @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.list-about:hover .list-about__text {
+    color: @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.list-about:hover .link-about-1 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.list-about:hover .link-about-2 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.list-about:hover .link-about-3 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.list-about:hover .link-about-4 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.list-about:hover .link-about-5 {
+    background-size: 118%;
+    transition: background-size 2s;
+}
+
+.link-about-1 {
+    width: 294px;
+    height: 294px;
+    display: block;
+    background-image: url(../img/kate_1.jpg);
+    text-decoration: none;
+    background-size: 100%;
+    transition: background-size 2s;
+}
+
+.link-about-2 {
+    width: 294px;
+    height: 294px;
+    display: block;
+    background-image: url(../img/GEV_9401_small.jpg);
+    text-decoration: none;
+    background-size: 100%;
+    transition: background-size 2s;
+}
+
+.link-about-3 {
+    width: 294px;
+    height: 294px;
+    display: block;
+    background-image: url(../img/GEV_4474_small.jpg);
+    text-decoration: none;
+    background-size: 100%;
+    transition: background-size 2s;
+}
+
+.link-about-4 {
+    width: 294px;
+    height: 294px;
+    display: block;
+    background-image: url(../img/GEV_4940-1_small.jpg);
+    text-decoration: none;
+    background-size: 100%;
+    transition: background-size 2s;
+}
+
+.link-about-5 {
+    width: 588px;
+    height: 600px;
+    display: block;
+    background-image: url(../img/GEV_3074_small.jpg);
+    text-decoration: none;
+    background-size: 100%;
+    transition: background-size 2s;
+}
+
+.for-parents {
+    margin-top: 50px;
+
+    &__title {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: @TextLinkColor;
+        text-decoration: underline;
+    }
+}
+
+.tips {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tips-left {
+    &__size {
+        width: 580px;
+    }
+
+    &__tips-list {
+        margin-bottom: 20px;
+    }
+
+    &__tips-text-one {
+        margin: 20px 0 20px 0;
+        font-size: 30px;
+        font-weight: 600;
+        color: @TextLinkColor;
+    }
+
+    &__tips-text-two {
+        font-size: 20px;
+    }
+}
+
+.tips-right {
+    &__size {
+        width: 580px;
+    }
+
+    &__tips-list {
+        margin-bottom: 20px;
+    }
+}
+
+.slider-feedback {
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 0 0 20px lightgrey;
+}
+
+.feedback-about {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .feedback-foto {
+        margin: 25px 50px 0 70px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%
+    }
+
+    .feedback-text {
+        width: 750px;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+}
+
+.item {
+    height: 300px;
+    background-color: @TextLinkColor;
+}
+
+.slider-feedback .prev,
+.slider-feedback .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider-feedback .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider-feedback .prev:hover,
+.slider-feedback .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.slider-dots_item {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+.slider-feedback .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.footer-flex {
+    background-color: lightgrey;
+    margin-top: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .contacts {
+        color: black;
+        font-size: 14px;
+        width: 400px;
+        margin-left: 100px;
+
+        &__link {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: @AllColor;
+            transition: all 0.3s;
+            margin-top: 5px;
+        }
+
+        .link-padding {
+            padding-left: 10px;
+        }
+
+        &__link:hover {
+            font-weight: bold;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contacts-me {
+            display: flex;
+            margin-top: 5px;
+        }
+    }
+
+    .icon-contacts {
+        padding-right: 5px;
+    }
+
+    .social {
+        display: flex;
+        margin-left: 400px;
+
+        &__link {
+            padding-right: 10px;
+        }
+
+        &__photo {
+            transition: all 0.3s;
+        }
+
+        &__photo:hover {
+            box-shadow: 0 0 30px @TextLinkColor;
+            transition: all 0.3s;
+        }
+    }
+}

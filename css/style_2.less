@@ -1,0 +1,178 @@
+@AllColor: black;
+@TextLinkColor: #d4b380;
+@widthAll: 1180px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    color: @AllColor
+}
+
+.footer-down {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 1;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;    
+    transition: all 0.5s;
+}
+
+.link:hover {
+    color: @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.header-flex {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &__navigation {
+        list-style-type: none;
+        padding: 15px 20px;
+    }
+
+    &__list {
+        padding-left: 60px;
+    }
+
+    &__link-main {
+        color: @TextLinkColor;
+    }
+}
+
+.contacts-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contacts-left{
+    width: @widthAll /3;
+}
+.contacts-right{
+    width: @widthAll /1.5;
+    display: flex;
+    &__contact {
+        list-style-type: none;
+        margin: 20px 0 0 60px;
+    }
+    &__list {
+        margin-bottom: 20px;
+    }
+    &__link {
+        font-size: 35px;
+        font-weight: 600;
+        text-decoration: none;
+        color: @AllColor; 
+        transition: all 0.3s;
+    }
+    &__link:hover {
+        color: @TextLinkColor;
+        transition: all 0.3s;
+    }
+}
+
+.qr-code {
+    margin: 140px 0 0 60px;
+}
+
+.text-right {
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: @TextLinkColor;
+}
+
+.footer-flex {
+    background-color: lightgrey;
+    margin-top: 30px;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .contacts {
+        color: black;
+        font-size: 14px;
+        width: 400px;
+        margin-left: 100px;
+
+        &__link {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: @AllColor;
+            transition: all 0.3s;
+            margin-top: 5px;
+        }
+
+        .link-padding {
+            padding-left: 10px;
+        }
+
+        &__link:hover {
+            font-weight: bold;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contacts-me {
+            display: flex;
+            margin-top: 5px;
+        }
+    }
+
+    .icon-contacts {
+        padding-right: 5px;
+    }
+
+    .social {
+        display: flex;
+        margin-left: 400px;
+
+        &__link {
+            padding-right: 10px;
+        }
+
+        &__photo {
+            transition: all 0.3s;
+        }
+
+        &__photo:hover {
+            box-shadow: 0 0 30px @TextLinkColor;
+            transition: all 0.3s;
+        }
+    }
+}

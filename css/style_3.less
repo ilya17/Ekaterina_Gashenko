@@ -1,0 +1,200 @@
+@AllColor: black;
+@TextLinkColor: #d4b380;
+@widthAll: 1180px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    color: @AllColor
+}
+
+.footer-down {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 1;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;    
+    transition: all 0.5s;
+}
+
+.link:hover {
+    color: @TextLinkColor;
+    transition: all 0.5s;
+}
+
+.header-flex {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &__navigation {
+        list-style-type: none;
+        padding: 15px 20px;
+    }
+
+    &__list {
+        padding-left: 60px;
+    }
+
+    &__link-main {
+        color: @TextLinkColor;
+    }
+}
+.box {
+    margin-top: 50px;
+}
+.box-flex {
+    display: flex;
+    border-top: 1px solid @TextLinkColor;
+    border-bottom: 1px solid @TextLinkColor;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    &__photo {
+        width: 300px;
+        height: 400px;
+        box-shadow: 0 0 30px @TextLinkColor;
+        transition: all 0.6s;
+    } 
+}
+.photo {
+    position: relative;
+}
+.photo-cover {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 400px;
+    color: white;
+    &__text-one {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 80px 0 20px 0;
+        text-align: center;
+    }
+    &__text-two {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+}
+.photo:hover .photo-cover {
+    display: block;
+}
+.photo:hover .box-flex__photo {
+    filter: brightness(60%);
+    transition: all 0.6s;
+}
+.about-box {
+    margin-left: 50px;
+}
+.text-pocketOne {
+    color: @TextLinkColor;
+    margin: 20px 0 20px 0;
+    font-size: 40px;
+}
+.list-pocket {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.text-pocketTwo {
+    color: @TextLinkColor;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.text-pocketThree {
+    font-size: 20px;
+}
+.footer-flex {
+    background-color: lightgrey;
+    padding: 10px 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .contacts {
+        color: black;
+        font-size: 14px;
+        width: 400px;
+        margin-left: 100px;
+
+        &__link {
+            width: 170px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: @AllColor;
+            transition: all 0.3s;
+            margin-top: 5px;
+        }
+
+        .link-padding {
+            padding-left: 10px;
+        }
+
+        &__link:hover {
+            font-weight: bold;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contacts-me {
+            display: flex;
+            margin-top: 5px;
+        }
+    }
+
+    .icon-contacts {
+        padding-right: 5px;
+    }
+
+    .social {
+        display: flex;
+        margin-left: 400px;
+
+        &__link {
+            padding-right: 10px;
+        }
+
+        &__photo {
+            transition: all 0.3s;
+        }
+
+        &__photo:hover {
+            box-shadow: 0 0 30px @TextLinkColor;
+            transition: all 0.3s;
+        }
+    }
+}
